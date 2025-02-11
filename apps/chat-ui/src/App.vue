@@ -40,7 +40,7 @@
     <div class="bg-gray-200 flex items-center p-4 shadow-inner">
       <textarea
         v-model="message"
-        placeholder="输入您的消息"
+        placeholder="快点输入您的消息吧"
         class="flex-grow mr-2 p-2 rounded bg-white text-black resize-none border border-gray-300 focus:outline-none focus:ring focus:border-blue-300"
         @keyup.enter="sendMessage"
         rows="1"
