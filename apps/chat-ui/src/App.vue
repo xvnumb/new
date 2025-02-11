@@ -19,8 +19,14 @@
     </div>
 
     <!-- Center Column (Chat) -->
-    <div class="flex-grow flex flex-col w-full bg-gray-900 text-white p-4 overflow-auto">
-      <div class="flex-grow overflow-y-auto mb-4">
+    <div class="flex-grow flex flex-col w-full bg-gray-900 text-white p-4 overflow-auto relative">
+      <!-- Background Text -->
+      <div class="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+        <span class="text-6xl sm:text-8xl md:text-9xl lg:text-[10rem] font-bold text-white/10">AI Chat</span>
+      </div>
+
+      <!-- Chat Content -->
+      <div class="flex-grow overflow-y-auto mb-4 relative z-10">
         <ul class="space-y-4">
           <li v-for="(conv, index) in conversations" :key="index" class="bg-gray-800 p-3 rounded shadow-sm">
             <strong>用户:</strong> {{ conv.user }}<br />
